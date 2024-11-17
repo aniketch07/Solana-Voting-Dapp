@@ -137,3 +137,11 @@ pub struct Poll{
   pub poll_end:u64,
   pub candidate_amount:u64,
 }
+
+#[error_code]
+pub enum ErrorCode {
+    #[msg("Voting has not started yet")]
+    VotingNotStarted,
+    #[msg("Voting has ended")]
+    VotingEnded,
+}

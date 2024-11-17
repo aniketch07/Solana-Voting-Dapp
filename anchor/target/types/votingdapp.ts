@@ -33,6 +33,7 @@ export type Votingdapp = {
         },
         {
           "name": "poll",
+          "writable": true,
           "pda": {
             "seeds": [
               {
@@ -147,7 +148,6 @@ export type Votingdapp = {
         },
         {
           "name": "poll",
-          "writable": true,
           "pda": {
             "seeds": [
               {
@@ -212,6 +212,18 @@ export type Votingdapp = {
         153,
         111
       ]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "votingNotStarted",
+      "msg": "Voting has not started yet"
+    },
+    {
+      "code": 6001,
+      "name": "votingEnded",
+      "msg": "Voting has ended"
     }
   ],
   "types": [
